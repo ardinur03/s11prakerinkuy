@@ -1,83 +1,56 @@
 <?php
-    // mengaktifkan session php
-	session_start();
-	// menghubungkan dengan koneksi
-	include ("koneksi.php");
-	// menangkap data yang dikirim dari form
-	$username = $_POST['username'];
-    $password = md5($_POST['password']);
-    // menyeleksi data admin dengan username dan password yang sesuai
-$login = mysqli_query($mysqli,"select * from users where username='$username' and password='$password'");
-     
-         
+// mengaktifkan session php
+session_start();
+// menghubungkan dengan koneksi db
+include("koneksi.php");
+// menangkap data yang dikirim dari form
+$username = $_POST['username'];
+$password = md5($_POST['password']);
+// menyeleksi data admin dengan username dan password yang sesuai
+$login = mysqli_query($mysqli, "select * from users where username='$username' and password='$password'");
+
+
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($login);
 
 
 // cek apakah username dan password di temukan pada database
-if($cek > 0){
- 
+if ($cek > 0) {
+
 	$data = mysqli_fetch_assoc($login);
 	// cek jika user login sebagai admin
-	if($data['level']=="admin"){
- 
+	if ($data['level'] == "admin") {
+
 		// buat session login dan username
 		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "login";
-		$_SESSION['level'] = "admin";
+		$_SESSION['status']   = "login";
+		$_SESSION['level']    = "admin";
 		$_SESSION['nama_user'] = $data['nama_user'];
 		// alihkan ke halaman dashboard admin
 		header("location:halaman_admin/dasboard_admin.php");
 
-	// cek jika user login sebagai siswa
-	}else if($data['level']=="siswa"){
-		
+		// cek jika user login sebagai siswa
+	} else if ($data['level'] == "siswa") {
+
 		// buat session login dan username
 		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "login";
-		$_SESSION['level'] = "Siswa";
-	    $_SESSION['nama_user'] = $data['nama_user'];
-	    
+		$_SESSION['status']   = "login";
+		$_SESSION['level']    = "Siswa";
+		$_SESSION['nama_user'] = $data['nama_user'];
+
 		// alihkan ke halaman dashboard siswa
-		 header("location:halaman_siswa/dashboard_siswa.php");
- 	
-	// cek jika user login sebagai guru
-	}else if($data['level'] =="guru"){
+		header("location:halaman_siswa/dashboard_siswa.php");
+
+		// cek jika user login sebagai guru
+	} else if ($data['level'] == "guru") {
 		// buat session login dan username
 		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "login";
-		$_SESSION['level'] = "guru";
+		$_SESSION['status']   = "login";
+		$_SESSION['level']    = "guru";
 		$_SESSION['nama_user'] = $data['nama_user'];
 		// alihkan ke halaman dashboard guru
 		header("location:halaman_guru/dashboard_guru.php");
-}
-}else{
-	header("location:login.php?pesan=gagal");
-}
-
- 
-	/*if (isset($_POST["username"]) and isset($_POST ["password"]))
-		// variabel session sudah di deklarasi
-	{ 
-		if ($_POST ["username"] == $valid_username and $_POST ["password"] == $valid_password)
-		{
-			// status login valid
-			$_SESSION ["stat_login"]= 1;
-			$_SESSION ["username"]  = $_POST ["username"];
-			$_SESSION ["password"]  = $_POST ["password"];
-			header("location:homepage.php"); //redirect ke homepage		
-		}
-		else
-		{
-			// status login:invalid
-			echo "username atau password salah <br><br>";
-			die ("silahkan klik <a href ='login.php'> disini </a> untuk login lagi");
-		}
 	}
-	else
-	{
-		// variabel session belum di deklarasi
-		echo "data tidak lengkap";
-	}
-	*/
-?>
+} else {
+	header("location:login.php?pesan=tidak_ada_inputan");
+}
