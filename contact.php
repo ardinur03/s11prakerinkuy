@@ -12,7 +12,7 @@
     <title>S11Prakerin Kuy | Contact</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="img/png" href="img/icon-img/icon11.ico"/>
+    <link rel="icon" type="img/png" href="img/icon-img/icon11.ico" />
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <!-- ***** Preloader Awal ***** -->
+    <!-- ***** Preloader Awal ***** -->
     <div id="preloader">
         <div class="mosh-preloader"></div>
     </div>
@@ -44,15 +44,15 @@
 
                             <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
                                 <ul class="navbar-nav animated" id="nav">
-                                    <li class="nav-item"><a class="nav-link" href ="index.html" title="Home">Home</a></li>
-                                    <li class ="nav-item"><a class ="nav-link" href ="about.html">About Us</a></li>
-                                    <li class ="nav-item active"><a class ="nav-link" href ="contact.php">Contact</a></li>
-                                    <li class ="nav-item dropdown">
-                                        <a class ="nav-link dropdown-toggle" href="#" id="moshDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
-                                        <div class ="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class ="dropdown-item" href ="about.html">About Us</a>
-                                            <a class ="dropdown-item" href ="#"></a>
-                                            <a class ="dropdown-item" href ="#">Help</a>
+                                    <li class="nav-item"><a class="nav-link" href="index.html" title="Home">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="contact.php">Contact</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="moshDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+                                        <div class="dropdown-menu" aria-labelledby="moshDropdown">
+                                            <a class="dropdown-item" href="about.html">About Us</a>
+                                            <a class="dropdown-item" href="#"></a>
+                                            <a class="dropdown-item" href="#">Help</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -63,13 +63,13 @@
                                         <button type="submit" class="d-none"><img src="img/core-img/search-icon.png" alt="Search"></button>
                                     </form>
                                 </div> -->
-                                 <!-- Search btn -->
+                                <!-- Search btn -->
                                 <!-- <div class="search-button">
                                     <a href="#" id="search-btn"><img src="img/core-img/search-icon.png" alt="Search"></a>
                                 </div> -->
                                 <!-- Login/Register btn -->
                                 <div class="login-register-btn">
-                                    <a  href="login.php" title="Login sebagai Siswa, Guru, Admin">Login</a>
+                                    <a href="login.php" title="Login sebagai Siswa, Guru, Admin">Login</a>
                                     <!-- <a href="guru.html" title="Sign Up">/ Coba</a>  -->
                                 </div>
                                 <!--
@@ -172,18 +172,20 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-100">
-                            <center><a href="#" class="mb-50 d-block">
-                            	<img src="img/logo-img/11bedabisa.png" height="50" alt="logo not found"> </a></center>
-                            	 <p class="tombol">
-                            	    <center><button class = "btn btn-primary" data-toggle="collapse" data-target = "#content" ari-expanded = "false" aria-controls = "content">
-                            	 		Klik saya :)
-                            	 	</button></center>
-                            	</p>
-                            	<div class ="collapse" id="content">
-                            	 	<div class ="card card-body">
-                            	 		<p class="text-center">Sekolah Menengah Kejuruan 11 Bandung merupakan salah satu Sekolah Menengah Kejuruan Negeri yang berada di Provinsi Jawa Barat, Indonesia, tepatnya di Kota Bandung. dan mempunyai 7 jurusan diantaranya Bismen dan Ti. </p>
-                            		</div>
-                            	</div>
+                            <center>
+                                <a href="#" class="mb-50 d-block">
+                                    <img src="img/logo-img/11bedabisa.png" height="50" alt="logo not found"> </a>
+                            </center>
+                            <p class="tombol">
+                                <center>
+                                    <button class="btn btn-primary" data-toggle="collapse" data-target="#content" ari-expanded="false" aria-controls="content">Klik saya :) </button>
+                                </center>
+                            </p>
+                            <div class="collapse" id="content">
+                                <div class="card card-body">
+                                    <p class="text-center">Sekolah Menengah Kejuruan 11 Bandung merupakan salah satu Sekolah Menengah Kejuruan Negeri yang berada di Provinsi Jawa Barat, Indonesia, tepatnya di Kota Bandung. dan mempunyai 7 jurusan diantaranya Bismen dan Ti. </p>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -213,7 +215,7 @@
                             <h5>Contact Info</h5>
                             <div class="footer-single-contact-info d-flex">
                                 <div class="contact-icon">
-                                    <img src="img/core-img/map.png"  alt="">
+                                    <img src="img/core-img/map.png" alt="">
                                 </div>
                                 <p>Jl. Budhi Cilember, Bandung, Jawa Barat, Indonesia</p>
                             </div>
@@ -242,9 +244,11 @@
                         <div class="footer-bottom-content h-100 d-md-flex justify-content-between align-items-center">
                             <div class="copyright-text">
                                 <p>
-									Copyright &copy;<script>document.write(new Date().getFullYear());</script> SMK Negeri 11 Bandung | by <a href="https://www.instagram.com/ardinur_03/" title="
+                                    Copyright &copy;<script>
+                                        document.write(new Date().getFullYear());
+                                    </script> SMK Negeri 11 Bandung | by <a href="https://www.instagram.com/ardinur_03/" title="
                                     Instagram Admin">Muhamad Ardi Nur Insan</a>
-								</p>
+                                </p>
                             </div>
                             <div class="footer-social-info"> <br>
                                 <a href="#" title="Facebook SMKN 11 Bandung"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -252,7 +256,7 @@
                                 <a href="https://www.youtube.com/channel/UCcdEkNHNB9NwW3XeMHsm-AA" title="YouTube Channel SMKN 11 Bandung"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                                 <a href="https://twitter.com/smkn11bandung" title="Twitter SMKN 11 Bandung"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <!-- sambungan footer -->
-                               <!--  <a href="#"><i class="" aria-hidden="true"></i></a>
+                                <!--  <a href="#"><i class="" aria-hidden="true"></i></a>
                                 <a href="#"><i class="" aria-hidden="true"></i></a> -->
                             </div>
                         </div>
@@ -262,7 +266,7 @@
         </div>
 
     </footer>
-	<!-- ***** Footer Area End ***** -->
+    <!-- ***** Footer Area End ***** -->
     <!-- jQuery-2.2.4 js -->
     <script src="js/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -274,4 +278,5 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
 </body>
+
 </html>
